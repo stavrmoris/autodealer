@@ -202,7 +202,7 @@
         // Преобразуем FormData в строку запроса
         const params = new URLSearchParams(formData).toString();
 
-        fetch(`http://localhost:8000/chinese/catalog/filter-cars/?${params}`, {
+        fetch(`/chinese/catalog/filter-cars/?${params}`, {
             method: 'GET',
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
@@ -294,7 +294,7 @@
         modelSelect.disabled = !brandId;
 
         if (brandId) {
-            fetch(`http://localhost:8000/catalog/get-models?brand_id=${brandId}`)
+            fetch(`/catalog/get-models?brand_id=${brandId}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.models && data.models.length > 0) {
