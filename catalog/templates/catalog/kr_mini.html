@@ -1,0 +1,354 @@
+<h1 class="h1_scheme">Каталог авто с аукционов Кореи</h1>
+<div class="container2">
+    <div class="filter-panel">
+        <form id="filter-form">
+            <div class="row">
+                <!-- Марка -->
+                <div>
+                    <label for="brand-select">Марка</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon hidden" onclick="clearField('brand-select')">&times;</span>
+                        <select class="custom-select clearable" name="brand" id="brand-select">
+                            <option class="" value="">Выберите марку</option>
+                            {% for brand in brands %}
+                                <option value="{{ brand.id }}">{{ brand.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <span class="arrow-icon">▼</span>
+                    </div>
+                </div>
+
+                <!-- Стоимость -->
+                <div class="col">
+                        <label for="cost_min">Стоимость</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('cost_min')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="cost_min" id="cost_min" list="costs-list-min" placeholder="от">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="costs-list-min">
+                            {% for cost in costs %}
+                                <option value="{{ cost }}">{{ cost }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('cost_max')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="cost_max" id="cost_max" list="costs-list-max" placeholder="до">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="costs-list-max">
+                            {% for cost in costs %}
+                                <option value="{{ cost }}">{{ cost }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Модель -->
+                <div>
+                    <label for="model-select">Модель</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon hidden" onclick="clearField('model-select')">&times;</span>
+                        <select class="custom-select clearable" name="model" id="model-select" disabled>
+                            <option value="">Выберите модель</option>
+                        </select>
+                        <span class="arrow-icon">▼</span>
+                    </div>
+                </div>
+
+                <!-- Объем двигателя -->
+                <div class="col">
+                        <label for="engine_min">Объем двигателя</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('engine_min')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="engine_min" id="engine_min" list="engine-volumes-list-min" placeholder="от">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="engine-volumes-list-min">
+                            {% for volume in engine_volumes %}
+                                <option value="{{ volume }}">{{ volume }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('engine_max')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="engine_max" id="engine_max" list="engine-volumes-list-max" placeholder="до">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="engine-volumes-list-max">
+                            {% for volume in engine_volumes %}
+                                <option value="{{ volume }}">{{ volume }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Год -->
+                <div class="col">
+                        <label for="year_min">Год производства</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('year_min')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="year_min" id="year_min" list="years-list-min" placeholder="от">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="years-list-min">
+                            {% for year in years %}
+                                <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+
+                    <div class="input-with-clear">
+                        <span class="clear-icon in-clear hidden" onclick="clearField('year_max')">&times;</span>
+                        <input type="number" class="clearable custom-datalist" name="year_max" id="year_max" list="years-list-max" placeholder="до">
+                        <span class="arrow-icon">▼</span>
+                        <datalist id="years-list-max">
+                            {% for year in years %}
+                                <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </datalist>
+                    </div>
+                </div>
+
+                <!-- Оценка -->
+                <div>
+                    <label for="rating">Оценка</label>
+                    <div class="input-with-clear">
+                        <span class="clear-icon hidden" onclick="clearField('rating')">&times;</span>
+                        <select class="clearable custom-select" name="rating" id="rating">
+                            <option value="">Все</option>
+                            {% for rate in ratings %}
+                                <option value="{{ rate.value }}">{{ rate.value }}</option>
+                            {% endfor %}
+                        </select>
+                        <span class="arrow-icon">▼</span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="search-button" class="btn">Найти</button>
+        </form>
+    </div>
+
+    <div class="car-list" id="car-list-container">
+        {% include "catalog/car_list_partial.html" %}
+    </div>
+</div>
+    <script>
+        document.querySelectorAll('.clearable').forEach(input => {
+            const clearIcon = input.previousElementSibling;
+
+            // Показать/скрыть крестик при изменении значения
+            input.addEventListener('input', () => {
+                clearIcon.style.display = input.value ? 'inline-block' : 'none';
+            });
+
+            // Очистить поле при клике на крестик
+            clearIcon.addEventListener('click', () => {
+                input.value = '';
+                clearIcon.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('input[list]').forEach(input => {
+            const arrowIcon = input.nextElementSibling;
+
+            // При фокусе или вводе текста
+            input.addEventListener('focus', () => {
+                arrowIcon.style.transform = 'translateY(-50%) rotate(180deg)';
+            });
+
+            // При потере фокуса
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    arrowIcon.style.transform = 'translateY(-50%)';
+                }
+            });
+
+            // При выборе значения из datalist
+            input.addEventListener('input', () => {
+                if (input.value) {
+                    arrowIcon.style.transform = 'translateY(-50%) rotate(180deg)';
+                } else {
+                    arrowIcon.style.transform = 'translateY(-50%)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.custom-select').forEach(select => {
+            const arrowIcon = select.nextElementSibling;
+
+            // При фокусе (открытие списка)
+            select.addEventListener('focus', () => {
+                arrowIcon.style.transform = 'translateY(-50%) rotate(180deg)';
+            });
+
+            // При потере фокуса (закрытие списка)
+            select.addEventListener('blur', () => {
+                arrowIcon.style.transform = 'translateY(-50%)';
+            });
+        });
+    </script>
+
+<script>
+    // Функция для загрузки автомобилей через AJAX
+    function loadCars() {
+        const form = document.getElementById('filter-form');
+        const formData = new FormData(form);
+
+        // Преобразуем FormData в строку запроса
+        const params = new URLSearchParams(formData).toString();
+
+        fetch(`http://localhost:8000/korean/catalog/filter-cars/?${params}`, {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('car-list-container').innerHTML = data.html;
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке автомобилей:', error);
+        });
+    }
+
+    // Функция для очистки поля
+    function clearField(fieldId) {
+        const field = document.getElementById(fieldId);
+
+        if (!field) {
+            console.error(`Элемент с id="${fieldId}" не найден.`);
+            return;
+        }
+
+        if (field.tagName === 'SELECT') {
+            field.selectedIndex = 0; // Сбрасываем выпадающий список
+        } else {
+            field.value = ''; // Сбрасываем текстовое поле
+        }
+
+        // Если это поле "Марка", сбрасываем и "Модель"
+        if (fieldId === 'brand-select') {
+            const modelSelect = document.getElementById('model-select');
+            if (modelSelect) {
+                modelSelect.innerHTML = '<option value="">Выберите модель</option>';
+                modelSelect.disabled = true;
+            }
+        }
+
+        // Перезагружаем результаты
+        loadCars();
+        updateClearIcons(); // Обновляем видимость крестиков
+    }
+
+    // Функция для обновления видимости крестиков
+    function updateClearIcons() {
+        const fields = document.querySelectorAll('.input-with-clear [id]');
+        fields.forEach(field => {
+            const clearIcon = field.nextElementSibling;
+            if (clearIcon && clearIcon.classList.contains('clear-icon')) {
+                console.log(`Проверка поля: ${field.id}, значение: "${field.value}"`); // Отладочная информация
+
+                if (field.tagName === 'SELECT' && field.selectedIndex > 0) {
+                    // Для выпадающих списков
+                    clearIcon.classList.remove('hidden');
+                } else if (field.tagName === 'INPUT') {
+                    // Для текстовых и числовых полей
+                    if (field.type === 'number') {
+                        // Числовые поля: проверяем, что значение не пустое и не равно ""
+                        const value = field.value;
+                        console.log(`Числовое поле: ${field.id}, значение: "${value}"`); // Отладочная информация
+                        if (value !== null && value !== '' && value !== '0') {
+                            clearIcon.classList.remove('hidden');
+                        } else {
+                            clearIcon.classList.add('hidden');
+                        }
+                    } else {
+                        // Текстовые поля: проверяем на пустую строку
+                        if (field.value.trim() !== '') {
+                            clearIcon.classList.remove('hidden');
+                        } else {
+                            clearIcon.classList.add('hidden');
+                        }
+                    }
+                } else {
+                    // Скрываем крестик для всех остальных случаев
+                    clearIcon.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    // Инициализация выбора моделей
+    document.getElementById('brand-select').addEventListener('change', function () {
+        const brandId = this.value;
+        const modelSelect = document.getElementById('model-select');
+
+        // Очищаем и блокируем выпадающий список "Модель"
+        modelSelect.innerHTML = '<option value="">Выберите модель</option>';
+        modelSelect.disabled = !brandId;
+
+        if (brandId) {
+            fetch(`http://localhost:8000/catalog/get-models?brand_id=${brandId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.models && data.models.length > 0) {
+                        // Добавляем модели в выпадающий список
+                        data.models.forEach(model => {
+                            const option = document.createElement('option');
+                            option.value = model;
+                            option.textContent = model;
+                            modelSelect.appendChild(option);
+                        });
+                    } else {
+                        // Если моделей нет, показываем сообщение
+                        const option = document.createElement('option');
+                        option.value = '';
+                        option.textContent = 'Нет доступных моделей';
+                        modelSelect.appendChild(option);
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка при загрузке моделей:', error);
+                });
+        }
+        updateClearIcons(); // Обновляем видимость крестиков
+    });
+
+    // Обработчик кнопки "Найти"
+    document.getElementById('search-button').addEventListener('click', function () {
+        loadCars();
+    });
+
+    // Слушатель событий для полей ввода
+    document.querySelectorAll('.input-with-clear [id]').forEach(field => {
+        field.addEventListener('input', () => {
+            console.log(`Событие input для поля: ${field.id}`); // Отладочная информация
+            updateClearIcons();
+        });
+
+        field.addEventListener('change', () => {
+            console.log(`Событие change для поля: ${field.id}`); // Отладочная информация
+            updateClearIcons();
+        });
+
+        field.addEventListener('focus', () => {
+            console.log(`Событие focus для поля: ${field.id}`); // Отладочная информация
+            updateClearIcons();
+        });
+
+        field.addEventListener('blur', () => {
+            console.log(`Событие blur для поля: ${field.id}`); // Отладочная информация
+            updateClearIcons();
+        });
+    });
+
+    // Загрузка автомобилей при первой загрузке страницы
+    loadCars();
+    updateClearIcons(); // Инициализация видимости крестиков
+</script>

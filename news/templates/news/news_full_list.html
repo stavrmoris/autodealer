@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="uy">
+        <ul class="item-list">
+            {% for item in news %}
+                <li>
+                    <li class="item-li" onclick="window.location.href='{% url 'news_detail' item.pk %}'" style="background-image: url('{{ item.image.url }}');">
+                        <p class="item-dt">{{ item.date|date:"d F Y г. H:i" }}</p>
+                    </li>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <style>
+        .uy {
+            margin: 70px 50px;
+        }
+    </style>
+{% endblock %}

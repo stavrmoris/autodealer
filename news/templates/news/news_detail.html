@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section class="section-item-d">
+        <div class="container2 container-item-d">
+            <h1 class=" h1-item-d">{{ news_item.title }}</h1>
+        <p>&nbsp;</p>
+
+        <p>
+            {{ news_item.text|safe }}
+        </p>
+
+        <p>&nbsp;</p>
+            <p class="item-time-p">{{ news_item.date|date:"d F Y г. H:i" }}</p>
+        </div>
+    </section>
+{% endblock %}

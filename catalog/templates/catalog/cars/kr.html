@@ -1,0 +1,38 @@
+{% if cars %}
+    {% for car in cars %}
+        <div class="car-card">
+            <a href="{% url 'car_detail' car.id %}">
+                {% if car.images.all %}
+                    <img src="{{ car.images.first.image.url }}" alt="Фото {{ car.name }}">
+                {% else %}
+                    <img src="/static/no-image.jpg" alt="Нет фото">
+                {% endif %}
+                <h2>{{ car.name|default:"Нет данных" }}</h2>
+                <ul>
+                    <li>
+                        <span class="card_name">Год</span>
+                        <span class="card_value">{{ car.year|default:"Нет данных" }}</span>
+                    </li>
+                    <li>
+                        <span class="card_name">Оценка</span>
+                        <span class="card_value">{{ car.rating|default:"Нет данных" }}</span>
+                    </li>
+                    <li>
+                        <span class="card_name">Объем</span>
+                        <span class="card_value">{{ car.engine_cc|default:"Нет данных" }}</span>
+                    </li>
+                    <li>
+                        <span class="card_name">Пробег</span>
+                        <span class="card_value">{{ car.mileage|default:"Нет данных" }}</span>
+                    </li>
+                    <li>
+                        <span class="card_name">Стоимость</span>
+                        <span class="card_value">{{ car.final_cost|default:"Нет данных" }} ₽</span>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align: center; font-size: 18px; color: #666;">Автомобилей не найдено.</p>
+{% endif %}

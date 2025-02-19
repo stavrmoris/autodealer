@@ -1,0 +1,22 @@
+<form id="feedback-form1" method="post" action="/feedback/form1/">
+    {% csrf_token %}
+    {{ form.user_name }}
+    {{ form.phone_number }}
+    {{ form.message }}
+    <br>
+    <p class="form_p_spos">Как с вами связаться?</p>
+    {{ form.contact_method }} <!-- Скрытое поле -->
+    <div class="pop_but">
+        <button type="button" onclick="setContactMethod1('whatsapp'); toggleClassById('popup', 'active');" class="btn_popup_whatsapp btn_form">По WhatsApp</button>
+        <button type="button" onclick="setContactMethod1('call'); toggleClassById('popup', 'active');" class="btn_popup btn_form">Перезвонить</button>
+        <div class="status"></div>
+    </div>
+</form>
+
+<script>
+    function setContactMethod(method) {
+        document.getElementById('id_contact_method').value = method;
+        document.getElementById('feedback-form1').submit();
+    }
+</script>
+

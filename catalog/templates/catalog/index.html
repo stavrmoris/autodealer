@@ -1,0 +1,522 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+    <section class="section-blic">
+        <div class="container2 container-blic">
+            <div class="blic-cent">
+
+                <h1 class="h1 blic-h1"><span class="blic_sir1">Автомобили с аукционов Японии под заказ</span><br><span class="blic_sir2">Доставим за 30 дней</span></h1>
+                <ul class="blic-left-list">
+                    <ul class="blic-left-list-item"><h2 class="h2 blic-list-item-h2">Полное сопровождение сделки: от выбора до получения авто в вашем городе</h2></ul>
+                    <!-- <h3 class="h3-blic">Свяжитесь с нами, мы обсудим с вами интересующий автомобиль и сориентируем вас в цене под ключ с доставкой</h3>                        -->
+                </ul>
+
+                <div class="btn-blic-div">
+                    <button onclick="toggleClassById('popup', 'active');" id="" class="btn btn-blic-rught margin-20 open_popup">Расcчитать авто</button>
+
+                    <a href="/catalog/" class="btn btn-blic-rught btn-blic-rught2 calc">Каталог с ценами</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        {% include "catalog/catalog_small.html" %}
+        <a href="catalog/" class="btn stat-vse" previewlistener="true">Открыть весь каталог</a>
+    </section>
+    <section id="section-prem" class="section-prem">
+        <div class="container2 container-prem">
+            <div class="Scheme">
+                <h1 class="h1_scheme h1-zag">Схема работы</h1>
+
+                        <p class="scheme_p">Полный цикл приобретения автомобиля: от подбора авто на аукционе до получения в вашем городе. Самый выгодные предложения в наличии и под заказ. Возвратный гарантийный взнос и месяц бесплатной стоянки в РФ. Страхование на всех этапах поставках. Быстрая доставка из Японии - до 25 дней.</p>
+
+                <ul class="scheme_list">
+                    <li class="scheme_list_item">
+
+                            <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon1_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Свяжитесь с нами</h3>
+                            <p class="scheme_list_item_p">Менеджер согласует критерии по автомобилю и сообщит стоимость</p>
+                        </div>
+                    </li>
+                    <li class="scheme_list_item">
+
+                        <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon2_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Заключить договор</h3>
+                            <p class="scheme_list_item_p">Лично в офисе или по эл. почте <br><a href="https://www.prim-autodealer.ru/static/file/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B0_%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8_%D0%98%D0%9F.pdf" download="" class="prem-dog">скачать договор</a></p>
+                        </div>
+                    </li>
+                    <li class="scheme_list_item">
+
+                        <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon3_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Подбор и покупка</h3>
+
+                                <p class="scheme_list_item_p">Согласовываем каждый вариант, проводим бесплатные осмотры автомобилей </p>
+
+                        </div>
+                    </li>
+                    <li class="scheme_list_item">
+
+                        <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon4_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Доставка</h3>
+
+                            <p class="scheme_list_item_p">Грузим на судно и отправляем в пункт назначения</p>
+
+                        </div>
+                    </li>
+                    <li class="scheme_list_item">
+
+                        <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon11_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Растаможка</h3>
+
+                                <p class="scheme_list_item_p">По прибытию в РФ авто проходит таможенное оформление</p>
+
+                        </div>
+                    </li>
+                    <li class="scheme_list_item">
+
+                        <img class="scheme_list_item_img" src="https://www.prim-autodealer.ru/static/img/icon5_japan.png" alt="">
+
+                        <div class="scheme-info">
+                            <h3 class="scheme_list_item_h3">Выдача/отправка</h3>
+                            <p class="scheme_list_item_p">Доставим в ваш город или выдадим с нашей площадки</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="section-prem-excellence" class="excellence">
+                <h1 class="h1_excellence h1-zag">Преимущества</h1>
+                <div class="excellence_item_div">
+                    <div class="excellence_item_div_line">
+                        <div class="excellence_item_div_line_pol">
+
+                            <img src="https://www.prim-autodealer.ru/static/img/icon6_japan.png" class="excellence_item_div_img" alt="">
+
+                            <div class="excellence_item_div_line_pol_info">
+                                <h3 class="excellence_item_div_h3">Бонус</h3>
+                                <p class="excellence_item_div_p">Месяц бесплатной стоянки в России</p>
+                            </div>
+                        </div>
+                        <div class="excellence_item_div_line_pol">
+
+                            <img src="https://www.prim-autodealer.ru/static/img/icon7_japan.png" class="excellence_item_div_img" alt="">
+
+                            <div class="excellence_item_div_line_pol_info">
+                                <h3 class="excellence_item_div_h3">Лучший опыт покупки</h3>
+                                <p class="excellence_item_div_p">Максимальный уровень комфорта, безопасности и практичности</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="excellence_item_div_line">
+                        <div class="excellence_item_div_center">
+
+                            <img src="https://www.prim-autodealer.ru/static/img/icon8_japan.png" class="excellence_item_div_center_img" alt="">
+
+                            <div class="excellence_item_div_line_pol_info">
+                                <h3 class="excellence_item_div_center_h3">Возвратный взнос</h3>
+                                <p class="excellence_item_div_center_p">Возвращаем 100 % взноса если автомобиль не был найден</p>
+                            </div>
+                            <button onclick="toggleClassById('popup', 'active');" class="btn excellence_item_div_center_btn open_popup">Консультация</button>
+                        </div>
+                    </div>
+                    <div class="excellence_item_div_line">
+                        <div class="excellence_item_div_line_pol">
+
+                            <img src="https://www.prim-autodealer.ru/static/img/icon9_japan.png" class="excellence_item_div_img" alt="">
+
+                            <div class="excellence_item_div_line_pol_info">
+                                <h3 class="excellence_item_div_h3">Страхование рисков</h3>
+                                <p class="excellence_item_div_p">Наши автомобили имеют страховку на всех этапах сделки</p>
+                            </div>
+                        </div>
+                        <div class="excellence_item_div_line_pol">
+
+                            <img src="https://www.prim-autodealer.ru/static/img/icon10_japan.png" class="excellence_item_div_img" alt="">
+
+                            <div class="excellence_item_div_line_pol_info">
+                                <h3 class="excellence_item_div_h3">Отлаженная логистика</h3>
+                                <p class="excellence_item_div_p">Доставка автомобилей в любую точку РФ в короткие сроки</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-item">
+        <div class="container2 container-item">
+            <h1 class="h1_item h1-zag">Автоновости</h1>
+            <ul class="item-list">
+
+
+                        <li class="item-li" onclick="window.location.href='/japan/news/TPO/'" style="background-image: url('https://prim-autodealer.ru/media/itemimg/2024-12-25_13.03.26.webp');">
+                            <!-- <h3 class="item-name">ТПО</h3> -->
+                            <p class="item-dt">10 января 2025 г. 12:01</p>
+                        </li>
+
+                        <li class="item-li" onclick="window.location.href='/japan/news/invoice_chto_eto_takoe/'" style="background-image: url('https://prim-autodealer.ru/media/itemimg/2024-12-25_12.59.29.webp');">
+                            <!-- <h3 class="item-name">Инвойс - что это такое?</h3> -->
+                            <p class="item-dt">10 января 2025 г. 12:02</p>
+                        </li>
+
+                        <li class="item-li" onclick="window.location.href='/japan/news/prohodnie_goda_avtomobiley/'" style="background-image: url('https://prim-autodealer.ru/media/itemimg/2024-12-25_12.57.59.webp');">
+                            <!-- <h3 class="item-name">Проходные года автомобилей</h3> -->
+                            <p class="item-dt">10 января 2025 г. 12:01</p>
+                        </li>
+
+
+            </ul>
+            <a href="catalog/" class="btn stat-vse" previewlistener="true">Смотреть все новости</a>
+        </div>
+    </section>
+    <section class="section-reviews">
+        <div class="container2 container-reviews">
+            <h1 class="h1_reviews h1-zag">Отзывы клиентов</h1>
+            <div class="reviews_item_list">
+                <div class="reviews_item_one">
+                    <a class="reviews_item_one_you" href="https://youtu.be/RR1uGLnLo7s?si=-4O-tEIdyDnyFCzy">
+                        <div class="block_you_name">
+                            <div class="block_you_name_img_div">
+                                <svg class="block_you_name_img_tube fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                                </svg>
+                                <span class="span_you_nam_tube">YouTube</span>
+                            </div>
+                            <span class="span_you_name"><span class="span_you_name_car">Mercedes-Benz CLA</span> для Станислава из Иркутска</span>
+                        </div>
+                        <img class="reviews_item_one_img_you" src="https://www.prim-autodealer.ru/media/reviewsimg/IMG_1055_VdAF2aS.PNG" alt="">
+                    </a>
+                    <div class="reviews_item_one_com">
+                        <div class="reviews_item_one_com_group">
+                            <img class="reviews_item_one_com_group_img" src="https://www.prim-autodealer.ru/static/img/vlru.webp" alt="">
+                            <div class="reviews_item_one_com_group_name">
+                                <div class="reviews_item_one_com_group_name_star">
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="reviews_item_one_com_group_name_span">Андрей</span>
+                            </div>
+
+                        </div>
+                        <p class="reviews_item_one_com_group_twxt">Выражаю благодарность компании Примавтодилер за выполнение взятых на себя обязательств по приобретению для меня автомобиля. Качественное и грамотное отношение к своему делу компанией в процессе выполнения моего заказа оставило у меня только положительные эмоции. Покупка автомобиля не вызвала никаких проблем. Автомобилем полностью доволен. Если вы надумали приобрести автомобиль из Китая, Кореи или Японии, то смело обращайтесь в компанию Примавтодилер.</p>
+                    </div>
+                    <a class="reviews_item_one_you" href="https://youtu.be/sG6EIMpw-98?si=mUNXPCQUuMzD0Gtq">
+                        <div class="block_you_name">
+                            <div class="block_you_name_img_div">
+                                <svg class="block_you_name_img_tube fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                                </svg>
+                                <span class="span_you_nam_tube">YouTube</span>
+                            </div>
+                            <span class="span_you_name"><span class="span_you_name_car">SsangYong Korando</span> для Юрия в Алтайский край</span>
+                        </div>
+                        <img class="reviews_item_one_img_you" src="https://www.prim-autodealer.ru/media/reviewsimg/IMG_1062.PNG" alt="">
+                    </a>
+                </div>
+                <div class="reviews_item_two">
+                    <a class="reviews_item_two_you" href="https://youtu.be/UbPoMGI8nf4?si=VNZzZoaAZKF9XPyU">
+                        <div class="block_you_name">
+                            <div class="block_you_name_img_div">
+                                <svg class="block_you_name_img_tube fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                                </svg>
+                                <span class="span_you_nam_tube font_14">YouTube</span>
+                            </div>
+                            <span class="span_you_name font_20"><span class="span_you_name_car">Lexus RX</span> Для Валерии из г. Владивосток</span>
+                        </div>
+                        <img class="reviews_item_two_img_you" src="https://www.prim-autodealer.ru/media/reviewsimg/IMG_1389.JPG" alt="">
+                    </a>
+                    <div class="reviews_item_two_block">
+                        <div class="reviews_item_two_block_one">
+                            <a class="reviews_item_two_you" href="https://youtu.be/mmDklNE7Ax0?si=rF1-REYIimDEcZWH">
+                                <div class="block_you_name">
+                                    <div class="block_you_name_img_div">
+                                        <svg class="block_you_name_img_tube fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                                        </svg>
+                                        <span class="span_you_nam_tube">YouTube</span>
+                                    </div>
+                                    <span class="span_you_name"><span class="span_you_name_car">HONDA CIVIC</span> для Виктора из Большого Каменя</span>
+                                </div>
+                                <img class="reviews_item_two_img_you" src="https://www.prim-autodealer.ru/media/reviewsimg/IMG_1054.webp" alt="">
+                            </a>
+                            <div class="reviews_item_two_com mar_20">
+                                <div class="reviews_item_two_com_group">
+                                    <img class="reviews_item_two_com_group_img" src="https://www.prim-autodealer.ru/static/img/vlru.webp" alt="">
+                                    <div class="reviews_item_two_com_group_name">
+                                        <div class="reviews_item_two_com_group_name_star">
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="reviews_item_two_com_group_name_span">Андрей</span>
+                                    </div>
+                                </div>
+                                <p class="reviews_item_two_com_group_twxt">Выражаю благодарность компании Примавтодилер за выполнение взятых на себя обязательств по приобретению для меня автомобиля. Качественное и грамотное отношение к своему делу компанией в процессе выполнения моего заказа оставило у меня только положительные эмоции.</p>
+                            </div>
+                        </div>
+                        <div class="reviews_item_two_block_two">
+                            <div class="reviews_item_two_com hei_100">
+                                <div class="reviews_item_two_com_group">
+                                    <svg class="reviews_item_two_com_group_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                        <path d="M2.04 12c0-5.523 4.476-10 10-10 5.522 0 10 4.477 10 10s-4.478 10-10 10c-5.524 0-10-4.477-10-10z" fill="#FC3F1D"></path>
+                                        <path d="M13.32 7.666h-.924c-1.694 0-2.585.858-2.585 2.123 0 1.43.616 2.1 1.881 2.959l1.045.704-3.003 4.487H7.49l2.695-4.014c-1.55-1.111-2.42-2.19-2.42-4.015 0-2.288 1.595-3.85 4.62-3.85h3.003v11.868H13.32V7.666z" fill="#fff"></path>
+                                    </svg>
+                                    <div class="reviews_item_two_com_group_name">
+                                        <div class="reviews_item_two_com_group_name_star">
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="reviews_item_two_com_group_name_span">Никита</span>
+                                    </div>
+                                </div>
+                                <p class="reviews_item_two_com_group_twxt">Я хотел бы выразить свою искреннюю благодарность компании. Они предоставили мне отличный сервис и помогли выбрать и приобрести автомобиль для мамы. Весь процесс был гладким и профессиональным — от первого обращения до момента, когда я получил ключи от своего автомобиля. Качество автомобиля превзошло мои ожидания, и я остался очень доволен как самим автомобилем, так и обслуживанием, предоставленным этой компанией. Я рекомендую обращаться к ним, кто хочет заказать себе автомобиль!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews_item_three">
+                    <div class="reviews_item_two_com">
+                        <div class="reviews_item_three_com_group">
+                            <svg class="reviews_item_three_com_group_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M2.04 12c0-5.523 4.476-10 10-10 5.522 0 10 4.477 10 10s-4.478 10-10 10c-5.524 0-10-4.477-10-10z" fill="#FC3F1D"></path>
+                                <path d="M13.32 7.666h-.924c-1.694 0-2.585.858-2.585 2.123 0 1.43.616 2.1 1.881 2.959l1.045.704-3.003 4.487H7.49l2.695-4.014c-1.55-1.111-2.42-2.19-2.42-4.015 0-2.288 1.595-3.85 4.62-3.85h3.003v11.868H13.32V7.666z" fill="#fff"></path>
+                            </svg>
+                            <div class="reviews_item_three_com_group_name">
+                                <div class="reviews_item_three_com_group_name_star">
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="reviews_item_three_com_group_name_span">Надежда</span>
+                            </div>
+                        </div>
+                        <p class="reviews_item_three_com_group_twxt">Спасибо "Прим Автодилер" за квалифицированную работу и помощь в покупке автомобиля. Приобретаем уже второй автомобиль через Прим Автодилер. Полностью довольны результатом, надежно, качественно, быстро. Оперативная обратная связь и ответы на все интересующие вопросы. Полное сопровождение от предварительной консультации, далее заключение договора и до получения автомобиля. Огромная благодарность!</p>
+                    </div>
+                    <a class="reviews_item_one_you mar_20" href="https://youtu.be/BDBH3oc-EC0?si=KPTCghYzLCf39R0M">
+                        <div class="block_you_name">
+                            <div class="block_you_name_img_div">
+                                <svg class="block_you_name_img_tube fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                                </svg>
+                                <span class="span_you_nam_tube">YouTube</span>
+                            </div>
+                            <span class="span_you_name"><span class="span_you_name_car">Subaru levorg</span> для Павла из г. Санкт-Петербург</span>
+                        </div>
+                        <img class="reviews_item_one_img_you " src="https://www.prim-autodealer.ru/media/reviewsimg/IMG_7069_qEt01Jj.JPG" alt="">
+                    </a>
+                    <div class="reviews_item_two_com">
+                        <div class="reviews_item_three_com_group">
+                            <img class="reviews_item_three_com_group_img" src="https://www.prim-autodealer.ru/static/img/twogis.webp" alt="">
+                            <div class="reviews_item_three_com_group_name">
+                                <div class="reviews_item_three_com_group_name_star">
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <svg class="reviews_item_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="reviews_item_three_com_group_name_span">Вика</span>
+                            </div>
+                        </div>
+                        <p class="reviews_item_three_com_group_twxt">Недавно я заказала автомобиль из Японии, и благодаря компании Прим Автодилер моя мечта осуществилась! Особую благодарность хочу выразить Никите, он не только профессионально ответил на все мои вопросы, но и подобрал мне идеальную модель – Suzuki Swift. Автомобиль прибыл в отличном состоянии, и я была приятно удивлена качеством обслуживания на всех этапах. Прим Автодилер действительно заботится о своих клиентах и делает все возможное, чтобы они остались довольны.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="review_group">
+                <a href="https://2gis.ru/vladivostok/firm/70000001075315231/tab/reviews" class="box_review" target="_blank">
+                    <div class="box_review_img_div">
+                        <img src="https://www.prim-autodealer.ru/static/img/twogis.webp" alt="" class="box_review_img">
+                    </div>
+                    <span class="box_review_span_name">2Gis</span>
+                    <div class="box_review_info">
+                        <div class="box_review_rating">
+                            <svg class="box_review_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="box_review_span_star">5</span>
+                        </div>
+                        <span class="box_review_span_info">67 отзыва</span>
+                    </div>
+                </a>
+                <a href="https://www.vl.ru/prim-autodealer" class="box_review" target="_blank">
+                    <div class="box_review_img_div">
+                        <img src="https://www.prim-autodealer.ru/static/img/vlru.webp" alt="" class="box_review_img">
+                    </div>
+                    <span class="box_review_span_name">Сайт Владивостока</span>
+                    <div class="box_review_info">
+                        <div class="box_review_rating">
+                            <svg class="box_review_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="box_review_span_star">5</span>
+                        </div>
+                        <span class="box_review_span_info">52 отзывов</span>
+                    </div>
+                </a>
+                <a href="https://yandex.ru/profile/45762870314?no-distribution=1&amp;view-state=mini&amp;source=wizbiz_new_map_single" class="box_review" target="_blank">
+                    <div class="box_review_img_div">
+                        <svg class="box_review_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M2.04 12c0-5.523 4.476-10 10-10 5.522 0 10 4.477 10 10s-4.478 10-10 10c-5.524 0-10-4.477-10-10z" fill="#FC3F1D"></path>
+                            <path d="M13.32 7.666h-.924c-1.694 0-2.585.858-2.585 2.123 0 1.43.616 2.1 1.881 2.959l1.045.704-3.003 4.487H7.49l2.695-4.014c-1.55-1.111-2.42-2.19-2.42-4.015 0-2.288 1.595-3.85 4.62-3.85h3.003v11.868H13.32V7.666z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <span class="box_review_span_name">Яндекс</span>
+                    <div class="box_review_info">
+                        <div class="box_review_rating">
+                            <svg class="box_review_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="box_review_span_star">5</span>
+                        </div>
+                        <span class="box_review_span_info">46 отзывов</span>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/@prim_autodealer_" class="box_review" target="_blank">
+                    <div class="box_review_img_div">
+                        <svg class="box_review_img fill_red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+                        </svg>
+                    </div>
+                    <span class="box_review_span_name">YouTube</span>
+                    <div class="box_review_info">
+                        <div class="box_review_rating">
+                            <svg class="box_review_star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="box_review_span_star">5</span>
+                        </div>
+                        <span class="box_review_span_info">22 отзывa</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-youtube">
+        <div class="container2">
+            <div class="container-youtube">
+                <div class="youtube-left">
+                    <h1 class="h1 h1_youtube">
+                        <span class="youtube_strong">Подпишитесь</span>
+                        <br>
+                        на наши соцсети
+                    </h1>
+                    <p class="p-youtube">Смотрите обзоры автомобилей, новые привозы и авторазбор, а также будьте в курсе событий</p>
+                    <div class="mob_soc display-youtube">
+                        <ul class="footer-link-soc">
+                            <li class="footer-link-soc-item">
+                                <a href="https://www.youtube.com/@prim_autodealer" class="footer-link-soc-a" target="_blank">
+                                    <svg class="youtube-soc-img" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" data-v-3f789117=""><path d="M34.4643 15.3013C34.1647 14.1081 33.2865 13.1676 32.1728 12.8463C30.1382 12.25 21.9997 12.25 21.9997 12.25C21.9997 12.25 13.8615 12.25 11.8269 12.8237C10.7347 13.1446 9.83504 14.1083 9.53543 15.3013C9 17.4805 9 22 9 22C9 22 9 26.5422 9.53543 28.6987C9.83535 29.8917 10.7132 30.8322 11.8271 31.1535C13.8829 31.75 22 31.75 22 31.75C22 31.75 30.1382 31.75 32.1728 31.1763C33.2867 30.8552 34.1647 29.9146 34.4646 28.7217C34.9999 26.5422 34.9999 22.0229 34.9999 22.0229C34.9999 22.0229 35.0213 17.4805 34.4643 15.3013ZM19.4086 26.1752V17.8248L26.1762 22L19.4086 26.1752Z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="footer-link-soc-item">
+                                <a href="https://instagram.com/prim_autodealer?igshid=MzRlODBiNWFlZA==" class="footer-link-soc-a" target="_blank">
+                                    <svg class="youtube-soc-img" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" data-v-3f789117=""><path d="M26.5319 11.0559C27.7009 11.1075 28.5045 11.2965 29.2009 11.5674C29.9401 11.8468 30.6018 12.2766 31.152 12.8398C31.7107 13.3901 32.1448 14.0563 32.4198 14.7871C32.6906 15.4876 32.8796 16.2872 32.9312 17.4564C32.9871 18.6343 33 19.0082 33 21.9957C33 24.9832 32.9871 25.3571 32.9355 26.5307C32.884 27.6999 32.6948 28.5037 32.4242 29.2C32.1448 29.9395 31.715 30.6014 31.152 31.1516C30.6018 31.7104 29.9357 32.1445 29.2051 32.4197C28.5045 32.6905 27.7052 32.8796 26.5363 32.9312C25.3586 32.9871 24.9847 33 21.9978 33C19.0109 33 18.637 32.9871 17.4637 32.9355C16.2948 32.884 15.4911 32.6947 14.7948 32.4239C14.0556 32.1445 13.3938 31.7104 12.8437 31.1516C12.285 30.6014 11.8508 29.9351 11.5758 29.2043C11.305 28.5037 11.116 27.7042 11.0645 26.5349C11.0128 25.3615 11 24.9874 11 21.9999C11 19.0124 11.0128 18.6385 11.0645 17.4649C11.116 16.2958 11.305 15.492 11.5758 14.7957C12.1475 13.3168 13.3164 12.1477 14.7948 11.5759C15.4953 11.3053 16.2948 11.116 17.4637 11.0645C18.637 11.0129 19.0109 11 21.9978 11C24.9847 11 25.3586 11.0044 26.5319 11.0559ZM17.5497 13.0374C16.4752 13.0848 15.895 13.2653 15.5082 13.4158C14.5498 13.7855 13.7892 14.5463 13.4195 15.5049C13.2691 15.8918 13.0886 16.4763 13.0414 17.5467C12.9897 18.7073 12.977 19.0554 12.977 21.9914C12.977 24.9273 12.9897 25.2797 13.0414 26.4362C13.0886 27.5108 13.2691 28.0911 13.4195 28.478C13.5958 28.955 13.8751 29.3892 14.2404 29.7417C14.5972 30.107 15.0269 30.3865 15.5039 30.5628C15.8907 30.7132 16.4752 30.8937 17.5453 30.9409C18.7057 30.9926 19.0539 31.0054 21.9893 31.0054C24.9246 31.0054 25.277 30.9926 26.433 30.9409C27.5075 30.8937 28.0877 30.7132 28.4745 30.5628C28.9516 30.3864 29.3855 30.107 29.7381 29.7373C30.1034 29.3807 30.3828 28.9508 30.5589 28.4736C30.7093 28.0867 30.8897 27.5021 30.9371 26.4318C30.9886 25.2712 31.0016 24.9229 31.0016 21.9872C31.0016 19.0468 30.9886 18.6988 30.9371 17.5424C30.8897 16.4677 30.7093 15.8874 30.5589 15.5005C30.3828 15.0235 30.1034 14.5893 29.7381 14.2368C29.3813 13.8715 28.9516 13.5921 28.4745 13.4158C28.0877 13.2653 27.5033 13.0848 26.433 13.0374C25.2727 12.9859 24.9246 12.973 21.9893 12.973C19.0539 12.973 18.7101 12.9859 17.5497 13.0374Z"></path><path d="M27.6489 21.9951C27.6489 25.1158 25.1176 27.6477 21.9974 27.6477C18.8772 27.6477 16.3459 25.1158 16.3459 21.9951C16.3459 18.8743 18.8772 16.3425 21.9974 16.3425C25.1176 16.3425 27.6489 18.8743 27.6489 21.9951ZM18.3314 21.9951C18.3314 24.0196 19.9731 25.6618 21.9974 25.6618C24.0217 25.6618 25.6634 24.0196 25.6634 21.9951C25.6634 19.9704 24.0217 18.3284 21.9974 18.3284C19.9731 18.3284 18.3314 19.9704 18.3314 21.9951Z"></path><path d="M27.8725 14.8005C27.1439 14.8005 26.5532 15.3914 26.5532 16.1203C26.5532 16.8491 27.1439 17.4399 27.8725 17.4399C28.6013 17.4399 29.1919 16.8491 29.1919 16.1203C29.1919 15.3914 28.6013 14.8005 27.8725 14.8005Z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="footer-link-soc-item">
+                                <a href="https://t.me/prim_autodealer" class="footer-link-soc-a" target="_blank">
+                                    <svg class="youtube-soc-img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-v-3f789117=""><path d="M10.4502 16.8369L12.1271 21.2577C12.1271 21.2577 12.3367 21.6706 12.5607 21.6706C12.7847 21.6706 16.1241 18.3622 16.1241 18.3622L19.8384 11.532L10.5101 15.6961L10.4502 16.8369Z" fill="white" fill-opacity="0.5"></path><path d="M12.6754 17.9709L12.3532 21.2291C12.3532 21.2291 12.2191 22.2274 13.2659 21.2291C14.3128 20.2309 15.3165 19.4608 15.3165 19.4608"></path><path d="M10.4821 16.9944L7.03256 15.9243C7.03256 15.9243 6.62052 15.7646 6.75347 15.4041C6.78102 15.3299 6.83612 15.266 7.00022 15.1565C7.7644 14.6488 21.1471 10.0683 21.1471 10.0683C21.1471 10.0683 21.5256 9.94742 21.7484 10.0273C21.8502 10.0638 21.9161 10.106 21.97 10.2577C21.9904 10.3125 22.0012 10.4311 22 10.5475C22 10.6319 21.988 10.7095 21.9796 10.8327C21.8982 12.0853 19.4595 21.4334 19.4595 21.4334C19.4595 21.4334 19.3134 21.9799 18.7911 21.9992C18.6007 22.0061 18.3695 21.9696 18.0928 21.7426C17.0663 20.9018 13.5209 18.6315 12.7376 18.1329C12.6932 18.1044 12.6813 18.0679 12.6729 18.0325C12.6621 17.9801 12.722 17.915 12.722 17.915C12.722 17.915 18.8965 12.6877 19.0606 12.139C19.0738 12.0968 19.0259 12.0751 18.9612 12.0933C18.5516 12.2371 11.4416 16.513 10.657 16.9853C10.6115 17.0126 10.4821 16.9955 10.4821 16.9955V16.9944Z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="footer-link-soc-item">
+                                <a href="http://vk.com/prim_autodealer" class="footer-link-soc-a" target="_blank">
+                                    <svg class="youtube-soc-img" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" data-v-3f789117=""><path d="M23.1611 29.6027C14.2779 29.6027 9.21112 23.9603 9 14.5714H13.4497C13.5959 21.4626 16.8762 24.3816 19.4746 24.9834V14.5714H23.6647V20.5147C26.2306 20.2589 28.9261 17.5506 29.8355 14.5714H34.0254C33.3271 18.2427 30.404 20.951 28.3253 22.0645C30.404 22.9672 33.7333 25.3295 35 29.6027H30.3877C29.3971 26.7439 26.9289 24.5321 23.6647 24.2311V29.6027H23.1611Z"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="youtube-right">
+                    <div class="swiper miSwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                        <div class="swiper-wrapper" id="swiper-wrapper-232b01d2483fb776" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+
+
+                                <div class="swiper-slide swiper-slider swiper-slide-active" role="group" aria-label="1 / 3" style="margin-right: 30px;"><a href="https://youtu.be/B2V3sEx70Vc?si=fnlWEF-6UzjlX4oj" target="_blank"><img src="https://www.prim-autodealer.ru/media/youtubeimg/Japan_Udar.webp" alt=""></a></div>
+
+                                <div class="swiper-slide swiper-slider swiper-slide-next" role="group" aria-label="2 / 3" style="margin-right: 30px;"><a href="https://youtu.be/QQDWg_G8g9E?si=g4BA7cisAkqDglLd" target="_blank"><img src="https://www.prim-autodealer.ru/media/youtubeimg/Japan_Levorg.webp" alt=""></a></div>
+
+                                <div class="swiper-slide swiper-slider" role="group" aria-label="3 / 3" style="margin-right: 30px;"><a href="https://youtu.be/kX0xOM-Ad4U?si=Wb2SLlNB5cmMOVf1" target="_blank"><img src="https://www.prim-autodealer.ru/media/youtubeimg/Japan_BMW.webp" alt=""></a></div>
+
+
+                        </div>
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

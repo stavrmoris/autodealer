@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+
+{% block content %}<!-- Подключение CSS Splide.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
+<!-- Подключение JS Splide.js -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <section class="section_jap_car_detail">
+        <div class="container2 container_jap_car_detail">
+            <h1 class=" h1_jap_car_detail">Купить {{ car.brand|default:"" }} {{ car.name|default:"" }} года с аукциона Японии</h1>
+            <div class="content_jap_car_detail">
+                <div class="imj_cont">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            {% if car.images.all %}
+                                {% for image in car.images.all %}
+                                    <div class="swiper-slide">
+                                        <a href="{{ image.image.url }}" data-fancybox="gallery" >
+                                            <img src="{{ image.image.url }}" alt="{{ car.name }}">
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <li class="splide__slide">
+                                    <p>Нет фотографий</p>
+                                </li>
+                            {% endif %}
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            {% if car.images.all %}
+                                {% for image in car.images.all %}
+                                    <div class="swiper-slide">
+                                        <img src="{{ image.image.url }}" alt="{{ car.name }}">
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <li class="splide__slide">
+                                    <p>Нет фотографий</p>
+                                </li>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="ops_con">
+                    <p class="jap_date_auc">Дата завершения аукциона: {{ car.name|default:"Нет данных" }}: {{ car.auction_end_date|date:"d.m.Y"|default:"Нет данных" }}</p>
+                    <div class="ops_jap_bl">
+                        <ul class="ops_jap_list">
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Тип кузова</span>
+                                <span class="ops_jap_value">{{ car.body_type|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Год</span>
+                                <span class="ops_jap_value">{{ car.year|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Двигатель, cc</span>
+                                <span class="ops_jap_value">{{ car.engine|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Трансмиссия</span>
+                                <span class="ops_jap_value">{{ car.transmission|default:"Нет данных" }}</span>
+                            </li>
+                        </ul>
+                        <ul class="ops_jap_list_two">
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Привод</span>
+                                <span class="ops_jap_value">{{ car.transmission|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Номер кузова</span>
+                                <span class="ops_jap_value">{{ car.chassis_number|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Пробег, км</span>
+                                <span class="ops_jap_value">{{ car.mileage|default:"Нет данных" }} км</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Оценка</span>
+                                <span class="ops_jap_value">{{ car.rating|default:"Нет данных" }}</span>
+                            </li>
+                        </ul>
+                        <ul class="ops_jap_list_m">
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Тип кузова</span>
+                                <span class="ops_jap_value">{{ car.body_type|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Год</span>
+                                <span class="ops_jap_value">{{ car.year|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Двигатель, cc</span>
+                                <span class="ops_jap_value">{{ car.engine|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Трансмиссия</span>
+                                <span class="ops_jap_value">{{ car.transmission|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Привод</span>
+                                <span class="ops_jap_value">{{ car.transmission|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Номер кузова</span>
+                                <span class="ops_jap_value">{{ car.chassis_number|default:"Нет данных" }}</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Пробег, км</span>
+                                <span class="ops_jap_value">{{ car.mileage|default:"Нет данных" }} км</span>
+                            </li>
+                            <li class="ops_jap_list_item">
+                                <span class="ops_jap_name">Оценка</span>
+                                <span class="ops_jap_value">{{ car.rating|default:"Нет данных" }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="price_jap_list">
+                        <li class="price_jap_list_item">
+                            <span class="price_jap_cat">Тип ввоза</span>
+                            <span class="price_jap_cat">Полная пошлина</span>
+                        </li>
+                        <!-- <li class="price_jap_list_item">
+                            <span class="price_jap_name">Стоимость в Японии</span>
+                            <span class="price_jap_value">863000 ¥</span>
+                        </li> -->
+                        <li class="price_jap_list_item">
+
+                                <span class="price_jap_name">Итоговая стоимость</span>
+                                <span class="price_jap_value">{{ car.final_cost|default:"Нет данных" }} ₽</span>
+
+                        </li>
+
+                            <p>Указана конечная стоимость во Владивостоке с учетом всех расходов.</p>
+
+                    </ul>
+                    <!-- <a href="#" class="btn btn_logo_m open_popup">Оставить заявку</a> -->
+                    <p class="ops_jap_p">Указанная цена является ориентировочной. Оставьте заявку для точного расчета стоимости и бесплатной консультации по покупке автомобиля.</p>
+                    <button onclick="toggleClassById('popup', 'active');" class="btn btn_ops_jap open_popup">ЗАКАЗАТЬ АВТОМОБИЛЬ</button>
+                </div>
+            </div>
+            <div class="auction_sheet">
+                <h2 class="h2_auction_sheet">
+                Справочник обозначений аукционного листа
+                </h2>
+                <div class="auction_sheet_clearfix">
+                    <div class="box_auction_sheet_img">
+                        <h3 class="h3 h3_auction_sheet">Аукционный лист</h3>
+                        <img class="auction_sheet_img" src="https://www.prim-autodealer.ru/media/jap_img/auction_sheet/Honda/VEZEL/e0189f54-cfef-469f-8ea9-9686ca74ca60.webp" alt="аукционный лист">
+                    </div>
+                    <div class="box_auction_sheet_list">
+                        <ul class="auction_sheet_list" id="auction_sheet_list">
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">A1</strong> Небольшая Царапина (уйдёт полировкой)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">A2</strong> Царапина (скорее всего уйдёт полировкой)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">A3</strong> Большая Царапина (скорее всего потребуется окрас)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">А4</strong> (потребуется окрас)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">E1</strong> Небольшая Вмятина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">E2</strong> Несколько Небольших Вмятин</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">E3</strong> Много Небольших Вмятин</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">U1</strong> Маленькая Вмятина (уйдет локально)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">U2</strong> Вмятина (скорее всего уйдёт локально)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">U3</strong> Большая вмятина (потребуется замена или рихтовка элемента)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">U4</strong> Очень большая Вмятина (потребуется замена или рихтовка элемента)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">W1</strong> Ремонт/Покраска (вторичный окрас, без шпаклёвки)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">W2</strong> Ремонт/Покраска (заметный вторичный окрас, возможна шпаклёвка)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">W3</strong>  Ремонт/Покраска (заметный вторичный окрас со шпаклёвкой)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">S1</strong> Малозаметная Ржавчина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">S2</strong> Заметная Ржавчина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">S3</strong> Повсеместная ржавчина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">C1</strong> Коррозия</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">C2</strong> Заметная Коррозия</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">С3</strong> Сквозная Коррозия</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">P</strong> Краска отличается от оригинала (выгорел лак)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">H</strong> Краска ухудшилась (например: мутные фары, требуют полировки)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">X</strong> Элемент требует замены</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">XX</strong> Замененный Элемент (была произведена замена элемента кузова)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">B1</strong> Маленькая вмятина с царапиной (уйдёт локально и заполируется)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">B2</strong> Вмятина с царапиной (уйдёт локально или потребует окраса)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">B3</strong> Большая вмятина с царапиной (Потребуется окрас)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">B4</strong> Очень большая вмятина с царапиной (потребуется замена элемента)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">Y1</strong> Маленькая Трещина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">Y2</strong> Трещина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">Y3</strong> Большая Трещина</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">X1</strong> Маленькая Трещина на Лобовом стекле (приблизительно 1 см)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">R</strong> Восстановленная Трещина на Лобовом стекле</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">RX</strong> Восстановленная Трещина на Лобовом стекле (требует замены)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">X</strong> Трещина на Лобовом стекле (требует замены)</li>
+                            <li class="auction_sheet_list_item"><strong class="auction_sheet_list_item_strong">G</strong> Трещина в стекле от камня</li>
+                        </ul>
+                        <button onclick="toggleClassById('auction_sheet_list', 'open'); toggleButtonTextAndContent(this);" class="show-more-btn">Показать еще</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .splide__slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swiper {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+        }
+
+        .mySwiper2 {
+          height: 80%;
+          width: 100%;
+        }
+
+        .mySwiper {
+          height: 20%;
+          box-sizing: border-box;
+          padding: 10px 0;
+        }
+
+        .mySwiper .swiper-slide {
+          width: 25%;
+          height: 100%;
+          opacity: 0.4;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+          opacity: 1;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swiper-slide a{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        function toggleButtonTextAndContent(button) {
+            // Находим элемент, который будем показывать/скрывать
+            var content = document.getElementById("auctionDetails");
+
+            // Проверяем текущий текст кнопки
+            if (button.textContent === "Показать еще") {
+                button.textContent = "Скрыть"; // Меняем текст на "Скрыть"
+                content.style.display = "block"; // Показываем контент
+            } else {
+                button.textContent = "Показать еще"; // Меняем текст обратно на "Показать еще"
+                content.style.display = "none"; // Скрываем контент
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          spaceBetween: 10,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+          loop: true,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox]', {
+        // Your custom options
+      });
+    </script>
+{% endblock %}

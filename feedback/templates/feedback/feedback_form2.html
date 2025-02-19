@@ -1,0 +1,14 @@
+<form id="feedback-form2" method="post" action="/feedback/form2/">
+    {% csrf_token %}
+    {{ form.user_name }}
+    {{ form.phone_number }}
+    {{ form.contact_method }}
+    <button type="button" onclick="setContactMethod('call')" class="btn btn_auc">Получить консультацию</button>
+</form>
+
+<script>
+    function setContactMethod(method) {
+        document.getElementById('id_contact_method').value = method;
+        document.getElementById('feedback-form2').submit();
+    }
+</script>
