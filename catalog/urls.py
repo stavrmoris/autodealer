@@ -13,7 +13,7 @@ urlpatterns = [
     path('korean/catalog/', views.korean_catalog, name='korean_catalog'),
 
     # Общие маршруты
-    path('', views.main_page, name='chinese_main'),
+    path('', views.chinese_main, name='chinese_main'),
     path('catalog/', views.car_list, name='car_list'),
     path('company/', views.company, name='company'),
     path('catalog/get-models', views.get_models, name='get_models'),
