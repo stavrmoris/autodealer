@@ -9,6 +9,7 @@ class Feedback(models.Model):
         choices=[
             ('call', 'Перезвонить'),
             ('whatsapp', 'Написать в WhatsApp'),
+            ('tg', 'Написать в Telegram'),
         ],
         verbose_name="Способ обращения"
     )

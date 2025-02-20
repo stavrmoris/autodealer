@@ -9,6 +9,7 @@
     <title>{% block title %}Автокаталог{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'style2.css' %}">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script>(function () { var widget = document.createElement('script'); widget.defer = true; widget.dataset.pfId = '7fc46a99-2d4c-4572-84bf-c5b177144810'; widget.src = 'https://widget.yourgood.app/script/widget.js?id=7fc46a99-2d4c-4572-84bf-c5b177144810&now='+Date.now(); document.head.appendChild(widget); })()</script>
 </head>
 <body>
     <header class="header">
@@ -135,6 +136,11 @@
                     </ul>
                 </ul>
                 <ul class="header-link-soc">
+                    <li class="header-link-soc-item">
+                        <a href="https://ok.ru" class="header-link-soc-a" target="_blank">
+                            <img src="{% static 'img/ok.svg' %}" alt="ok" class="img-soc">
+                        </a>
+                    </li>
                     <li class="header-link-soc-item">
                         <a href="https://wa.me/79141724142" class="header-link-soc-a" target="_blank">
                             <svg class="header-soc-img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-v-801d4db6=""><path fill-rule="evenodd" clip-rule="evenodd" d="M20.9605 11.0346C20.3146 10.3877 19.5463 9.87479 18.6998 9.52557C17.8534 9.17635 16.9457 8.99777 16.0294 9.00018C12.1856 9.00018 9.06016 12.112 9.05849 15.937C9.05695 17.1543 9.37791 18.3505 9.98902 19.4051L9 22.9999L12.6954 22.0352C13.7173 22.5891 14.8624 22.8793 16.0261 22.8794H16.0291C19.8708 22.8794 22.9983 19.7673 22.9997 15.9423C23.0026 15.0307 22.8238 14.1276 22.4738 13.2853C22.1238 12.4429 21.6094 11.6779 20.9605 11.0346V11.0346ZM16.0294 21.7079H16.0261C14.9884 21.708 13.9699 21.4305 13.0771 20.9042L12.8655 20.7792L10.6725 21.3516L11.2581 19.2228L11.1201 19.0046C10.5407 18.0859 10.234 17.0229 10.2354 15.9383C10.2354 12.7593 12.8357 10.1727 16.0318 10.1727C17.5684 10.1736 19.0419 10.7819 20.1279 11.8638C21.214 12.9457 21.8238 14.4127 21.8231 15.942C21.8218 19.1213 19.2228 21.7079 16.0294 21.7079ZM19.2074 17.3896C19.0332 17.3028 18.1769 16.8833 18.0171 16.8241C17.8574 16.7649 17.7414 16.7376 17.6254 16.9109C17.5094 17.0842 17.1755 17.4764 17.0739 17.5905C16.9723 17.7046 16.8707 17.7209 16.6966 17.6341C16.5224 17.5473 15.9612 17.3643 15.2958 16.7736C14.778 16.3142 14.4284 15.7464 14.3265 15.5727C14.2245 15.3991 14.3158 15.3066 14.403 15.2192C14.4812 15.1413 14.5771 15.0166 14.664 14.9155C14.7509 14.8143 14.7804 14.7418 14.8382 14.6264C14.896 14.511 14.8673 14.4095 14.8238 14.3227C14.7804 14.2359 14.4321 13.3827 14.2867 13.0354C14.1453 12.6974 14.0019 12.7433 13.895 12.738C13.7947 12.733 13.677 12.7317 13.5607 12.7317C13.4724 12.7341 13.3856 12.7546 13.3056 12.792C13.2257 12.8294 13.1543 12.8828 13.0961 12.9489C12.9367 13.1222 12.4868 13.5417 12.4868 14.3949C12.4868 15.2481 13.1108 16.0724 13.1977 16.1881C13.2846 16.3039 14.4261 18.0545 16.1725 18.8053C16.4968 18.9446 16.8282 19.0668 17.1655 19.1712C17.583 19.3043 17.9627 19.2843 18.2625 19.2397C18.5967 19.1902 19.2933 18.8206 19.4383 18.4158C19.5834 18.011 19.5834 17.6637 19.5386 17.5912C19.4938 17.5187 19.3815 17.4764 19.2074 17.3896V17.3896Z"></path></svg>
@@ -296,20 +302,20 @@
                             </li>
                         </ul>
                     </ul>
-                    <ul class="footer_gps_list">
-                        <li class="footer_gps_list_item">
-                            <h3 class="footer_gps_h3">Офис</h3>
-                        </li>
-                        <li class="footer_gps_list_item">
-                            <img style="padding:10px 10px 10px 10px ;" src="https://prim-autodealer.ru/static/img/gps.png" alt="" class="burger_menu_list_bottom-item_img">
-                            <p class="gps_footer">Владивосток, ул. Абрекская 5, офис 6</p>
-                        </li>
-                        <li class="footer_gps_list_item space">
-                            <iframe src="https://yandex.ru/sprav/widget/rating-badge/45762870314?type=rating&amp;theme=dark" width="150" height="50" style="margin: 5px 0 0 10px ;" frameborder="0"></iframe>
-                            <div id="catalogCompanyWidget" style=""></div>
-                            <iframe id="medium_dark_70000001075315231" frameborder="0" width="150px" height="50px" style="margin: 5px 0 0 10px ;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
-                        </li>
-                    </ul>
+{#                    <ul class="footer_gps_list">#}
+{#                        <li class="footer_gps_list_item">#}
+{#                            <h3 class="footer_gps_h3">Офис</h3>#}
+{#                        </li>#}
+{#                        <li class="footer_gps_list_item">#}
+{#                            <img style="padding:10px 10px 10px 10px ;" src="https://prim-autodealer.ru/static/img/gps.png" alt="" class="burger_menu_list_bottom-item_img">#}
+{#                            <p class="gps_footer">Владивосток, ул. Абрекская 5, офис 6</p>#}
+{#                        </li>#}
+{#                        <li class="footer_gps_list_item space">#}
+{#                            <iframe src="https://yandex.ru/sprav/widget/rating-badge/45762870314?type=rating&amp;theme=dark" width="150" height="50" style="margin: 5px 0 0 10px ;" frameborder="0"></iframe>#}
+{#                            <div id="catalogCompanyWidget" style=""></div>#}
+{#                            <iframe id="medium_dark_70000001075315231" frameborder="0" width="150px" height="50px" style="margin: 5px 0 0 10px ;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>#}
+{#                        </li>#}
+{#                    </ul>#}
                     <div class="mob_soc">
                         <ul class="footer-link-soc">
                             <!-- <li class="footer-link-soc-item">
@@ -340,13 +346,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer-bot">
-                    <div class="vl_cart">
-                        <h3 class="vl_cart_h3">Владивосток</h3>
-                        <iframe class="footer-cart" src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=45762870314" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <!-- <iframe class="footer-cart" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.5796486677154!2d131.91403002982196!3d43.11334802849021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3927a7f8e2615%3A0xfcbcd55f6be457a0!2z0JDQsdGA0LXQutGB0LrQsNGPINGD0LsuLCA1LCDQktC70LDQtNC40LLQvtGB0YLQvtC6LCDQn9GA0LjQvNC-0YDRgdC60LjQuSDQutGA0LDQuSwgNjkwMDAx!5e0!3m2!1sru!2sru!4v1663723182973!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                    </div>
-                </div>
+{#                <div class="footer-bot">#}
+{#                    <div class="vl_cart">#}
+{#                        <h3 class="vl_cart_h3">Владивосток</h3>#}
+{#                        <iframe class="footer-cart" src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=45762870314" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>#}
+{#                        <!-- <iframe class="footer-cart" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.5796486677154!2d131.91403002982196!3d43.11334802849021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3927a7f8e2615%3A0xfcbcd55f6be457a0!2z0JDQsdGA0LXQutGB0LrQsNGPINGD0LsuLCA1LCDQktC70LDQtNC40LLQvtGB0YLQvtC6LCDQn9GA0LjQvNC-0YDRgdC60LjQuSDQutGA0LDQuSwgNjkwMDAx!5e0!3m2!1sru!2sru!4v1663723182973!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->#}
+{#                    </div>#}
+{#                </div>#}
             </div>
             <div class="pol">
                 <div class="one-pol">

@@ -8,6 +8,7 @@
     {{ form.contact_method }} <!-- Скрытое поле -->
     <div class="pop_but">
         <button type="button" onclick="setContactMethod1('whatsapp'); toggleClassById('popup', 'active');" class="btn_popup_whatsapp btn_form">По WhatsApp</button>
+        <button type="button" onclick="setContactMethod1('tg'); toggleClassById('popup', 'active');" class="btn_popup_tg btn_popup btn_form">По Telegram</button>
         <button type="button" onclick="setContactMethod1('call'); toggleClassById('popup', 'active');" class="btn_popup btn_form">Перезвонить</button>
         <div class="status"></div>
     </div>
