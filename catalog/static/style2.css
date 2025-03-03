@@ -249,7 +249,7 @@ ul {
 .section-blic {
     padding-top: 25px;
     padding-bottom: 50px;
-    background-image: url(http://localhost:8000/static/img/1.png);
+    background-image: url(/static/img/1.png);
     background-position: center;
     background-size: contain;
     height: calc(100vh - 160px);
@@ -257,11 +257,11 @@ ul {
 }
 
 .kkkr {
-    background-image: url(http://localhost:8000/static/img/2.png);
+    background-image: url(/static/img/2.png);
 }
 
 .ccch {
-    background-image: url(http://localhost:8000/static/img/1.png);
+    background-image: url(/static/img/1.png);
 }
 
 @media (max-width: 1600px) {
@@ -1126,7 +1126,7 @@ p{font-size:14px;}
 @media (max-width: 1024px){
 h2{font-size:18px;}
 .btn{font-size:12px;}
-.section-blic{background-image:url(http://localhost:8000/static/img/3.png);background-size:80%;background-position:top  center;height:700px;}
+.section-blic{background-image:url(/static/img/3.png);background-size:80%;background-position:top  center;height:700px;}
 .blic-h1{text-align:center;margin-top:400px;font-size:45px;width:100%;}
 .blic-list-item-h2{display:none;}
 .btn-blic-rught{margin-left:auto;margin-right:auto;}
